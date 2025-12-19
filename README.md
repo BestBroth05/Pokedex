@@ -15,49 +15,9 @@ Google Chrome (para Web)
 
 Emulador iOS / Android o dispositivo físico
 
-Variables de entorno (.env)
-
-Para configurar el endpoint de la API se utiliza un archivo .env.
-
-Crear el archivo
-
-En la raíz del proyecto crear un archivo llamado .env con el siguiente contenido:
-
-BASE_URL=http://3.144.142.177/api/
-
-
-El archivo .env no está incluido en el repositorio y debe crearse manualmente.
-
-Configuración en pubspec.yaml
-
-Para que Flutter pueda leer el archivo .env, es necesario agregarlo como asset:
-
-flutter:
-  assets:
-    - .env
-
-
 Después ejecutar:
 
 flutter pub get
-
-Carga del .env
-
-Las variables se cargan al iniciar la aplicación usando flutter_dotenv.
-Esto se hace en main.dart, antes de llamar a runApp:
-
-await dotenv.load(fileName: ".env");
-
-Uso en el código
-
-La variable se utiliza principalmente en el cliente HTTP para definir el baseUrl:
-
-final baseUrl = dotenv.env['BASE_URL']!;
-
-Nota sobre Flutter Web
-
-En Flutter Web el .env se carga en tiempo de build.
-Para un entorno productivo se podría usar --dart-define, pero para este challenge el uso de .env es suficiente.
 
 Ejecutar la aplicación
 Mobile

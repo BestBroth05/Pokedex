@@ -12,7 +12,7 @@ import 'features/pokedex/data/repositories/pokemon_repository.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
-  await LocalCache.init(); // abre boxes
+  await LocalCache.init();
   await dotenv.load(fileName: Environment.fileName);
   final api = PokeApiClient();
   final cache = LocalCache();

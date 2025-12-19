@@ -278,4 +278,4 @@ Mejoras de accesibilidad (semantics y navegación por teclado en Web).
 Autor
 
 Brayan Olivares
-Flutter / Full Stack Developer
+Flutter / Full Stack and Mobile Developer

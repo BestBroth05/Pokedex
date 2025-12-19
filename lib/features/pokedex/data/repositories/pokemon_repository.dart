@@ -24,7 +24,6 @@ class PokemonRepository {
         query: {'limit': '$limit', 'offset': '$offset'},
       );
 
-      // cachear respuesta “normalizada” para offline
       final items = (json['results'] as List? ?? [])
           .whereType<Map>()
           .map((e) => PokemonListItem.fromListJson(e.cast<String, dynamic>()))
@@ -36,7 +35,7 @@ class PokemonRepository {
 
       return items;
     } catch (_) {
-      // fallback offline
+     
       final cached = cache.getJson(key);
       if (cached == null) rethrow;
 

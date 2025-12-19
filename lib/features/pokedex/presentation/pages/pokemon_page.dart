@@ -18,7 +18,7 @@ class PokedexPage extends StatefulWidget {
 
 class _PokedexPageState extends State<PokedexPage> {
   final _scrollController = ScrollController();
-  int? _selectedId; // usado en desktop master-detail
+  int? _selectedId;
 
   @override
   void initState() {

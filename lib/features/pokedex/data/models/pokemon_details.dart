@@ -23,7 +23,6 @@ class PokemonDetail extends Equatable {
         .whereType<String>()
         .toList();
 
-    // artwork official si existe
     final sprites = (json['sprites'] as Map?)?.cast<String, dynamic>();
     final other = (sprites?['other'] as Map?)?.cast<String, dynamic>();
     final artwork = (other?['official-artwork'] as Map?)

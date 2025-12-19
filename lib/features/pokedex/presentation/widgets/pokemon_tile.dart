@@ -20,11 +20,10 @@ class PokemonTile extends StatelessWidget {
 
   Color _backgroundColor(BuildContext context) {
     if (selected) {
-      // cuando está seleccionado, este color manda sobre par/impar
+      
       return AppColors.primary300.withValues(alpha: 30);
     }
 
-    // zebra: pares/impares
     return index.isEven ? AppColors.primary200 : AppColors.primary100;
   }
 

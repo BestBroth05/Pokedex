@@ -19,7 +19,7 @@ class AppCoreAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        // ---------- APPBAR PRINCIPAL ----------
+        
         AppBar(
           backgroundColor: AppColors.primary,
           automaticallyImplyLeading: false,
@@ -35,9 +35,9 @@ class AppCoreAppBar extends StatelessWidget implements PreferredSizeWidget {
           actions: actions,
         ),
 
-        // ---------- LÍNEA DEBAJO (1 PX) ----------
+    
         Container(
-          height: 1, // 👈 super delgada
+          height: 1,
           color: AppColors.primary100,
         ),
       ],
